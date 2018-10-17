@@ -11,4 +11,8 @@ attr_accessor :price, :address, :rooms
     @rooms = []
   end
 
+  def add_room(room)
+    @rooms << room
+  end
+
 end

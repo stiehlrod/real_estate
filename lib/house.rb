@@ -16,7 +16,7 @@ attr_accessor :price, :address, :rooms
   end
 
   def rooms_from_category(category)
-    room.category
+    @rooms.category
   end
 
   def area
@@ -25,6 +25,12 @@ attr_accessor :price, :address, :rooms
       total_area += room.area
     end
     total_area
+  end
+
+  def price_per_square_foot
+    area = self.area
+    house_area = @price / area.to_f
+    house_area.round(2)
   end
 
 

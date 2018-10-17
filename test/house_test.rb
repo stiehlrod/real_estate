@@ -24,4 +24,10 @@ class TestHouse < Minitest::Test
     #=> "123 sugar lane"
   end
 
+  def test_it_has_rooms
+    house = House.new(400000, "123 sugar lane")
+    assert_equal [], house.rooms
+  end
+
+
 end

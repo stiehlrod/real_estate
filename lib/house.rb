@@ -16,7 +16,9 @@ attr_accessor :price, :address, :rooms
   end
 
   def rooms_from_category(category)
-    @rooms.category
+    @rooms.select do |room|
+      @category = category
+    end
   end
 
   def area
@@ -38,6 +40,14 @@ attr_accessor :price, :address, :rooms
       room.area
     end
   end
+
+  def rooms_by_category
+    @rooms.sort_by do |room|
+      by_category = Hash.new(0)
+      by_category[:category] += room
+    end
+  end
+
 
 
 end

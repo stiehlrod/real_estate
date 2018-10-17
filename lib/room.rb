@@ -1,11 +1,18 @@
 require 'pry'
 
+
 class Room
 
-    def initialize(type, num, num2)
-      @type = type
-      @num = num
-      @num2 = num2
+attr_accessor :category
+
+    def initialize(category, length, width)
+      @category = category
+      @length = length
+      @width = width
+    end
+
+    def area
+      @length * @width
     end
 
 

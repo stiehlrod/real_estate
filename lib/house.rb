@@ -3,7 +3,7 @@ require 'pry'
 
 class House
 
-attr_accessor :price
+attr_accessor :price, :address
 
   def initialize(price, address)
     @price = price

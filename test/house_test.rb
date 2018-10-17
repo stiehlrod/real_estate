@@ -10,7 +10,12 @@ class TestHouse < Minitest::Test
     house = House.new("$400000", "123 sugar lane")
     assert_instance_of House, house
     #=> #<House:0x00007fccd30375f8...>
+  end
 
+  def test_it_has_a_price
+    house = House.new(400000, "123 sugar lane")
+    assert_equal 400000, house.price
+    #=> 400000
   end
 
 end

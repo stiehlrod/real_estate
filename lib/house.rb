@@ -3,8 +3,10 @@ require 'pry'
 
 class House
 
-  def initialize(list_price, address)
-    @list_price = list_price
+attr_accessor :price
+
+  def initialize(price, address)
+    @price = price
     @address = address
   end
 

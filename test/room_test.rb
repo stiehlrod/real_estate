@@ -12,7 +12,7 @@ class TestRoom < Minitest::Test
   end
 
   def test_it_has_a_category
-    skip
+    
     room = Room.new(:bedroom, 10, 13)
     assert_equal :bedroom, room.category
     #=> :bedroom

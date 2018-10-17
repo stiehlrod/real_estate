@@ -1,6 +1,5 @@
 require 'pry'
 
-
 class Room
 
 attr_accessor :category
